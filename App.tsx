@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
@@ -75,7 +74,7 @@ const CoursePlayerModal: React.FC<{ course: Course; onClose: () => void; isLogge
                  </button>
                </div>
                <p className="absolute bottom-6 left-6 text-green-500/60 font-mono text-xs z-20 animate-pulse">
-                 >> SYSTEM READY. AWAITING INPUT.
+                 &gt;&gt; SYSTEM READY. AWAITING INPUT.
                </p>
              </div>
            ) : (
