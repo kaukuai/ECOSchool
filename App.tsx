@@ -74,7 +74,7 @@ const CoursePlayerModal: React.FC<{ course: Course; onClose: () => void; isLogge
                  </button>
                </div>
                <p className="absolute bottom-6 left-6 text-green-500/60 font-mono text-xs z-20 animate-pulse">
-                 &gt;&gt; SYSTEM READY. AWAITING INPUT.
+                 {'>>'} SYSTEM READY. AWAITING INPUT.
                </p>
              </div>
            ) : (
