@@ -2,7 +2,8 @@ import { GoogleGenAI } from "@google/genai";
 
 // 簡單獲取 API Key，允許 Vite 在建置時直接進行字串替換
 // @ts-ignore: process 可能在瀏覽器環境中未定義，但 Vite 會替換這個變數
-const apiKey = process.env.API_KEY || "";
+// 使用 Vite 專用的環境變數讀取方式
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY || "";
 
 const ai = new GoogleGenAI({ apiKey });
 
