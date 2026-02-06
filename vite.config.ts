@@ -1,20 +1,11 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  // 這一段是救星：防止瀏覽器因為看不懂 process 而當機
   define: {
-    'process.env.API_KEY': JSON.stringify(process.env.API_KEY),
-    // 增加一個全局的 process.env 模擬，防止部分依賴包報錯
-    'process.env': {
-      API_KEY: JSON.stringify(process.env.API_KEY)
-    }
-  },
-  build: {
-    outDir: 'dist',
-    sourcemap: false,
-  },
-  server: {
-    port: 3000,
-  },
-});
+    'process.env': {}
+  }
+})
